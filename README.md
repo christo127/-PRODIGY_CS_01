@@ -1,46 +1,41 @@
-# Caesar Cipher 🔐
-The Caesar Cipher is one of the earliest encryption techniques, named after Julius Caesar, who used it to secure his messages. This cipher shifts each letter in the alphabet by a set number of positions. For instance, with a shift of 3, ‘A’ becomes ‘D’, ‘B’ becomes ‘E’, and so forth. While simple, it laid the foundation for modern cryptography.
+# Caesar Cipher
 
-## Table of Contents
-- [Introduction](#Introduction)
-- [Algorithm](#Algorithm)
-- [Rules](#Rules)
-- [How to Run](#How to Run)
-- [Code](#Code)
-- [Example](#Example)
+The Caesar Cipher is one of the earliest and simplest encryption methods, named after Julius Caesar, who used it to secure his military messages. This cipher involves shifting each letter in the alphabet by a set number of positions. For instance, with a shift of three, ‘A’ becomes ‘D’, ‘B’ becomes ‘E’, and so forth. While straightforward, the Caesar Cipher laid the foundation for modern cryptographic practices. In this article, we’ll delve into the mechanics of the Caesar Cipher, its historical importance, and its influence on cryptography, including its strengths and weaknesses.
 
-# Introduction
-The Caesar Cipher involves shifting each letter in a message by a set amount. This method can be used for encryption and decryption. Though not suitable for modern security needs, it serves as a foundational exercise in cryptography.
+### Algorithm for Caesar Cipher
 
-## Algorithm
-Input:
-Choose a shift value between 1 and 25.
-Write down the alphabet in order from A to Z.
-Shift the Alphabet:
-Create a shifted alphabet by moving each letter in the original alphabet forward by the chosen shift value. For example, with a shift of 3:
-mathematica
-Copy code
-Original alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-Shifted alphabet:  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
-Encrypt or Decrypt:
-Encryption: Replace each letter in the original message with its corresponding letter in the shifted alphabet.
-Decryption: Shift each letter in the encrypted message backward by the same shift value.
-Rules
-Choose a shift value between 1 and 25.
-To encrypt a message, shift each letter forward by the chosen value.
-To decrypt, shift each letter back by the same value.
-How to Run
-Save the code in a file named caesar.py.
-Open a command prompt or terminal and navigate to the directory where you saved the file.
-Run the script by typing:
-bash
-Copy code
-python caesar.py
-Follow the prompts to enter the text, shift value, and select to either encrypt or decrypt.
-Code
-Here’s the Python code for the Caesar Cipher:
+**Input:**
 
-python
+1. Select a shift value between 1 and 25.
+2. Write down the alphabet in order from A to Z.
+3. Create a shifted alphabet by moving each letter in the original alphabet forward by the chosen shift value. For example, with a shift of 3:
+   - Original alphabet: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+   - Shifted alphabet:  D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+4. For encryption, replace each letter in the original message with its corresponding letter in the shifted alphabet. For instance, if the shift value is 3, “hello” becomes “khoor.”
+5. For decryption, shift each letter in the encrypted message backwards by the same shift value. For example, with a shift of 3, “khoor” reverts to “hello.”
+
+### Rules for the Caesar Cipher
+
+1. Select a shift value between 1 and 25.
+2. Write out the alphabet in order, from A to Z.
+3. Shift each letter in the alphabet by the chosen value. For example, with a shift of 3, A becomes D, B becomes E, C becomes F, and so on.
+4. To encrypt a message, replace each letter with its corresponding shifted letter. For instance, with a shift of 3, “hello” becomes “khoor.”
+5. To decrypt, reverse the process by shifting each letter back by the same amount. For example, if the shift is 3, “khoor” reverts to “hello.”   
+
+### How to Run
+
+To run this script, follow these steps:
+
+1. Save the Python code in a file named `caesar.py`.
+2. Open a command prompt and navigate to the directory where you saved the file.
+3. Run the script by typing `python caesar.py`, then follow the prompts.
+
+Try experimenting with different messages and shift values!
+
+### Code
+
+Here is the Python code for the Caesar Cipher:
+```
 def caesar_cipher(message, shift_value, action='encrypt'):
     result_text = ""
     shift_value = shift_value if action == 'encrypt' else -shift_value
@@ -56,7 +51,7 @@ def caesar_cipher(message, shift_value, action='encrypt'):
     return result_text
 
 
-    def main():
+def main():
     print("Welcome to the Caesar Cipher Program!")
     action = input("Select action: (e)ncrypt or (d)ecrypt: ").lower()
     text = input("Enter the text: ")
@@ -75,9 +70,6 @@ def caesar_cipher(message, shift_value, action='encrypt'):
 
 if __name__ == "__main__":
     main()
-Example
-With a shift value of 3:
+ ```   
 
-Encryption: "hello" becomes "khoor"
-Decryption: "khoor" reverts to "hello"
-Try experimenting with different messages and shift values!
+
