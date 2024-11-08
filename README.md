@@ -1,17 +1,18 @@
-Caesar Cipher 🔐
+# Caesar Cipher 🔐
 The Caesar Cipher is one of the earliest encryption techniques, named after Julius Caesar, who used it to secure his messages. This cipher shifts each letter in the alphabet by a set number of positions. For instance, with a shift of 3, ‘A’ becomes ‘D’, ‘B’ becomes ‘E’, and so forth. While simple, it laid the foundation for modern cryptography.
 
-Table of Contents
-Introduction
-Algorithm
-Rules
-How to Run
-Code
-Example
-Introduction
+## Table of Contents
+- [Introduction](#Introduction)
+- [Algorithm](#Algorithm)
+- [Rules](#Rules)
+- [How to Run](#How to Run)
+- [Code](#Code)
+- [Example](#Example)
+
+# Introduction
 The Caesar Cipher involves shifting each letter in a message by a set amount. This method can be used for encryption and decryption. Though not suitable for modern security needs, it serves as a foundational exercise in cryptography.
 
-Algorithm
+## Algorithm
 Input:
 Choose a shift value between 1 and 25.
 Write down the alphabet in order from A to Z.
